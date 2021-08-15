@@ -1,0 +1,19 @@
+{
+  "name": "layaouts",
+  "version": "1.0.0",
+  "description": "consumir una api",
+  "main": "layaouts/card.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "api",
+    "layaout"
+  ],
+  "author": "maria bracho",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "node-fetch": "^2.6.1"
+  }
+}
