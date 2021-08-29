@@ -1,12 +1,16 @@
-import { aleatorio } from '../../utils/maths.js'
-import { GAME_ACTION_OPTIONS } from '../../utils/constants/gameActionOptions.js'
+import {
+  aleatorio
+} from '../../utils/maths.js'
+import {
+  GAME_ACTION_OPTIONS
+} from '../../utils/constants/gameActionOptions.js'
 
 const listOfAction = Object.values(GAME_ACTION_OPTIONS)
 
 export class Game {
-  constructor(initialLife = 1) {
+  constructor(initialLife = 3) {
     this.listOfAction = listOfAction
-    this.lifePoints = 3
+    this.lifePoints = 1
 
     this.userLife = initialLife
     this.machineLife = initialLife
@@ -15,6 +19,9 @@ export class Game {
     this.machineNickName = 'I am a robot :)'
 
     this.finallyWin = null
+    this.finalGame=null
+
+    this.ActionMachine=null
   }
 
   getUserLife() {
@@ -22,7 +29,7 @@ export class Game {
   }
 
   substractUserLifePoints() {
-    this.userLife = this.lifePoints - this.userLife
+    this.userLife = this.userLife - this.lifePoints
     return this.userLife
   }
 
@@ -31,7 +38,7 @@ export class Game {
   }
 
   substractMachineLifePoints() {
-    this.machineLife = this.lifePoints - this.machineLife
+    this.machineLife = this.machineLife - this.lifePoints
     return this.machineLife
   }
 
@@ -41,6 +48,17 @@ export class Game {
 
   getStatus() {
     return this
+  }
+  newGame(){
+    this.machineLife=3
+    this.userLife=3
+    this.finallyWin=null
+    this.finalGame=null
+
+  }
+
+  getActionMachine(){
+      return this.ActionMachine
   }
 
   playGame(idUserAction, nickName = null) {
@@ -54,6 +72,7 @@ export class Game {
 
     const userAction = this.getAction(idUserAction)
     const machineAction = this.getAction(idMachineAction)
+    this.ActionMachine=machineAction
 
     if (userAction && machineAction) {
       const sumResults = machineAction.id + userAction.id
@@ -61,19 +80,30 @@ export class Game {
       const userWin = userAction.win === sumResults
       const machineWin = machineAction.win === sumResults
 
-      if (userWin) {
-        console.log("User win")
-        this.substractMachineLifePoints()
-        this.finallyWin = this.userNickName
-      } else if (machineWin) {
-        console.log("Machine win")
-        this.substractUserLifePoints()
-        this.finallyWin = this.machineNickName
-      } else {
-        this.finallyWin = 'GAME TIE :('
+      if (!(this.getUserLife() === 0 && this.getMachineLife() === 0)) {
+        if (userWin) {
+          console.log("User win")
+          this.substractMachineLifePoints()
+          this.finallyWin = this.userNickName
+        } else if (machineWin) {
+          console.log(machineAction.url)
+          console.log("Machine win")
+          this.substractUserLifePoints()
+          this.finallyWin = this.machineNickName
+        } else {
+          this.finallyWin = 'GAME TIE :('
+        }
+      }
+      if (this.getUserLife() === 0) {
+        console.log("gano la maquina")
+         this.finalGame="maquina"
+
+      } else if (this.getMachineLife() === 0) {
+        console.log("gano el usuario")
+        this.finalGame="Usuario"
       }
 
-      console.log('WIN => ', this.finallyWin)
+      return this.finallyWin
     }
 
     return this
