@@ -3,14 +3,17 @@
   margin: 0;
   width: 100%;
   height: 100%;
+
 }
 
 .Game__Title {
-  width: 100%;
+  width:1450px;;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  margin-top: 50px;
+  color: green;
+  text-shadow: 2px 2px 10px #97ce4c;
 }
 
 .ListOfOptions {
@@ -19,6 +22,7 @@
   justify-content: space-around;
   align-items: center;
   height: 60vh;
+  flex-wrap: wrap;
 }
 
 .ListOfOptions__OptionCard {
@@ -31,4 +35,201 @@
   border: 1px solid green;
   border-radius: 8px;
   cursor: pointer;
+
+}
+
+.card_juego_1{
+  background-image: url("https://img.icons8.com/color/48/000000/clenched-fist.png");
+  background-size: cover;
+}
+
+.card_juego_2{
+  background-image: url("https://img.icons8.com/color/48/000000/clenched-fist.png");
+  background-size: cover;
+}
+
+.card_juego_3{
+ 
+  background-image: url("https://img.icons8.com/color/50/000000/hand-scissors--v1.png");
+  background-size: cover;
+}
+
+.cardWin{
+  height: 350px;
+  width: 400px;
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  margin-top: 230px;
+}
+
+.button-full{
+  display: flex;
+  width: 100%;
+  height: 21px;
+  justify-content: flex-end;
+
+  
+}
+
+.button{
+  display: flex;
+  height: 16px;
+  width:40px ;
+  border-radius: 5px;
+  margin: 3px;
+  padding-left: 10px;
+}
+
+.wintext{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+.wintext-full{
+ height: 100%px;
+ width: 100%;
+  
+}
+
+.Win{
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.estructura{
+  
+}
+
+.full-Card{
+  display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    align-content: center;
+    position: absolute;
+    background-color:rgba(0, 0, 0, 0.5);
+    z-index: 9;
+
+}
+
+
+.contadorUser{
+  background-color: white;
+  border-radius: 5px;
+  display:block;
+  height: 60px;
+  width: 200px;
+  display: flex;
+}
+
+.contadorMachine{
+  background-color: white;
+  border-radius: 5px;
+  display:block;
+  height: 60px;
+  width: 200px;
+  display: flex;
+}
+
+.container{
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.winfinaly{
+display: flex;
+width: 100%;
+height: 100%;
+justify-content: center;
+}
+
+.lifeUserSub{
+  display: block;
+  height: 100%;
+  width: 50%;
+  border-left: 2px solid black;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  font-size: 30px;
+}
+
+.lifeUser{
+  padding: 10px;
+}
+
+.lifeMachine{
+ padding: 10px;
+}
+
+.lifeMachineSub{
+  display: block;
+  height: 100%;
+  width: 50%;
+  border-left: 2px solid black;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  font-size: 30px;
+}
+
+.imgOfmachine{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 90px;
+
+}
+
+.estructuraOfMachine{
+  display: flex;
+  height: 500px;
+  width: 50%;
+}
+
+.estructura-card2{
+  display: flex;
+}
+
+.rootSub{
+  display: flex;
+    justify-content: space-around;
+}
+
+.rootList{
+  width: 50%;
+}
+
+.skillMachine{
+    background-color:wheat;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    border: 1px solid green;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.skill{
+    height: 200px;
+    width: 200px;
+    position: fixed;
+    display: flex;
+    /* justify-items: center; */
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+
 }

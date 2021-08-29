@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="../../styles/game.css">
 </head>
 <body class="estructura">
+	<div class= "modal" id=modalInfo></div>
 	<nav class="inicio">
 		<!-- <figure class="icono"><img src="../../assets/images/icon.png" class="icono--img"></figure> -->
 		<ul class="lista">
@@ -15,7 +16,16 @@
 			<li class="lista--sub"><a href="card.html" class="lista--link">Cards</a></li>
 		</ul>
 	</nav>
-	<div id="root"></div>
+	<div class="estructura-card2" id="estructura-card2">
+	<div id="root" class="rootList"></div>
+	<div class="estructuraOfMachine">
+    <div class="imgOfmachine" id="machine"></div>
+    </div>	
+	</div>
+	<div class="nickname" >
+		<label>Escribe tu nombre: </label><input id="nickname" type="text" name="nombre" placeholder='Ej:"Miguel"' value="">
+	</div>
+    <div class="rootSub"id="rootSub"></div>	
 	<script type="module" src="index.js"></script>
 </body>
 </html>
