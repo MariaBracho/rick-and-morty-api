@@ -1,1 +1,1 @@
- export let nickname=document.getElementById("nickname").addEventListener("sumit",)
+ export let nickname=document.getElementById("nickname").value

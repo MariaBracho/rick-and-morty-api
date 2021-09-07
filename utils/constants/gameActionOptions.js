@@ -9,7 +9,7 @@ export const GAME_ACTION_OPTIONS = {
     id: 2,
     name: "Papel",
     win: 5,
-    url:"https://img.icons8.com/color/48/000000/clenched-fist.png",
+    url:"https://img.icons8.com/color/48/000000/hand.png",
   },
   SCISSORS: {
     id: 3,

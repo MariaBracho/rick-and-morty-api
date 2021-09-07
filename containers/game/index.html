@@ -2,20 +2,25 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, intial-scale=1" />
 	<title>Juego</title>
 	<link rel="stylesheet" type="text/css" href="../../styles/layout.css">
 	<link rel="stylesheet" type="text/css" href="../../styles/game.css">
+	<link rel="stylesheet" type="text/css" href="http://fonts.cdnfonts.com/css/arco" > 
+	<link rel="stylesheet" type="text/css" href="../../../nav.css">
 </head>
 <body class="estructura">
 	<div class= "modal" id=modalInfo></div>
-	<nav class="inicio">
-		<!-- <figure class="icono"><img src="../../assets/images/icon.png" class="icono--img"></figure> -->
-		<ul class="lista">
-			<li class="lista--sub"><a href="Index.html" class="lista--link">Inicio</a></li>
-			<li class="lista--sub"><a href="juego.html" class="lista--link">Juego</a></li>
-			<li class="lista--sub"><a href="card.html" class="lista--link">Cards</a></li>
-		</ul>
+	<div class="burguerButton" id="burguerBotton"></div>
+		<div class="burguer" id=burguer></div>
+	<div class="iconoInicio" id="icono">
+		<figure class="icono"><img src="../../assets/images/icon.png" class="icono--img"></figure>
+	</div>
+	<nav class="inicio" id="inicio">
 	</nav>
+	<div class="Game__Title">
+          <h1>PAPEL, PIEDRA O TIJERA</h1>
+    </div>
 	<div class="estructura-card2" id="estructura-card2">
 	<div id="root" class="rootList"></div>
 	<div class="estructuraOfMachine">
@@ -23,9 +28,10 @@
     </div>	
 	</div>
 	<div class="nickname" >
-		<label>Escribe tu nombre: </label><input id="nickname" type="text" name="nombre" placeholder='Ej:"Miguel"' value="">
+		<label>Escribe tu nombre: </label><di class="border"><input class="nicknameInput" id="nickname" type="text" name="nombre" placeholder='  Ej:"Miguel"' value=""></di>
 	</div>
     <div class="rootSub"id="rootSub"></div>	
 	<script type="module" src="index.js"></script>
+	<script type="module" src="./../../navMovil/movil.js"></script>
 </body>
 </html>

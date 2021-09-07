@@ -15,8 +15,8 @@ export class Game {
     this.userLife = initialLife
     this.machineLife = initialLife
 
-    this.userNickName = 'Mr. Pene'
-    this.machineNickName = 'I am a robot :)'
+    this.userNickName = 'usuario'
+    this.machineNickName = 'La maquina'
 
     this.finallyWin = null
     this.finalGame=null
@@ -84,23 +84,23 @@ export class Game {
         if (userWin) {
           console.log("User win")
           this.substractMachineLifePoints()
-          this.finallyWin = this.userNickName
+          this.finallyWin = `Ganador: "${this.userNickName}"`
         } else if (machineWin) {
           console.log(machineAction.url)
           console.log("Machine win")
           this.substractUserLifePoints()
-          this.finallyWin = this.machineNickName
+          this.finallyWin =` Ganador: "${this.machineNickName}"`
         } else {
           this.finallyWin = 'GAME TIE :('
         }
       }
       if (this.getUserLife() === 0) {
         console.log("gano la maquina")
-         this.finalGame="maquina"
+         this.finalGame=`Intentalo de nuevo :(, ganador: "${this.machineNickName}"`
 
       } else if (this.getMachineLife() === 0) {
         console.log("gano el usuario")
-        this.finalGame="Usuario"
+        this.finalGame=`Enhorabuena ganador: "${this.userNickName}"`
       }
 
       return this.finallyWin

@@ -22,9 +22,6 @@ export class GameUI {
   render() {
     this.root.innerHTML = `
       <section class="Game">
-        <div class="Game__Title">
-          <h1>PAPEL, PIEDRA O TIJERA</h1>
-        </div>
         <div class="ListOfOptions">
           <div class="ListOfOptions__OptionCard card_juego_1" id="${STONE.id}">
             <h3>PIEDRA</h3>
@@ -58,7 +55,7 @@ export class GameUI {
 
   }
   getModal(texto,ganador){
-   this.modalInfo.innerHTML=`<div class="full-Card"><div class="cardWin"><div class="button-full"><button class="button" id="button">X</button></div> <div class="wintext"><div class="wintext-full"><h1 class="Win"> Enhorabuena ganador: "${ganador}"</h1><p class="resultWin"> ${texto}</p></div></div> </div></div>`
+   this.modalInfo.innerHTML=`<div class="full-Card"><div class="cardWin"><div class="button-full"><button class="button" id="button">X</button></div> <div class="wintext"><div class="wintext-full"><h1 class="Win">${ganador}</h1><p class="resultWin"> ${texto}</p></div></div> </div></div>`
   }
 
   hideModal() {
