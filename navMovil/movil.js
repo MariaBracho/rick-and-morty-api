@@ -5,7 +5,7 @@ import {
 let menu=new Burguer()
 let count=0
 
-let burguer=window.matchMedia(`(max-width:575px)`)
+let burguer=window.matchMedia(`(max-width:991px)`)
 burguer.addListener(function(event){
   console.log("evento",event)
   if(burguer.matches)

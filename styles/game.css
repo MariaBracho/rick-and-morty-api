@@ -17,7 +17,7 @@
   justify-content: center;
   padding: 50px;
   color: green;
-  font-size: 25px;
+  font-size: 2.5rem;
   position: absolute;
   font-family: 'ARCO' , sans-serif ;
 }
@@ -159,7 +159,7 @@ display: flex;
 width: 100%;
 height: 100%;
 justify-content: center;
-position:fixed;
+position:absolute;
 margin-top: -90px;
 font-size: 2.2rem;
 }
@@ -254,7 +254,7 @@ font-size: 2.2rem;
 }
 .nickname{
   padding-left: 30px;
-  font-size: 1.9rem;
+  font-size: 2.0rem;
 }
 
 .border:hover{
@@ -271,7 +271,71 @@ font-size: 2.2rem;
 
 ::-webkit-input-placeholder { color: green; 
 font-size: 17px;} 
+@media (max-width: 1399.98px) { 
+.container{
+  margin-top: 70px;
+}
+.ListOfOptions__OptionCard{
+margin-bottom: 80px;
+margin-top: -60px;
+}
+.nickname{
+  position: absolute;
+  padding-top: 150px;
+  font-size: 2.5rem;
+ }
+ .winfinaly{
+  margin-top: 40px;
+  height: 0px;
+ }
+ .rootList{
+padding-left:40px;
+ }
+ .winfinaly{
 
+}
+@media (max-width: 1199.98px) {
+.container{
+  margin-top: 100px;
+}
+.nickname{
+  position: absolute;
+  padding-top: 180px;
+  font-size: 2.8rem;
+ }
+ .winfinaly{
+  margin-top: 40px;
+ }
+}
+
+@media (max-width: 991px){
+.container{
+  margin-top: 100px;
+}
+.nickname{
+  position: absolute;
+  padding-top: 180px;
+}
+.ListOfOptions__OptionCard{
+height: 150px;
+width: 150px;
+}
+
+.skill, .skillMachine{
+height: 150px;
+width: 150px;
+}
+.rootList{
+  padding-left: 30px;
+}
+
+}
+
+@media (min-width: 960px){
+  .ListOfOptions{
+    padding-left: 50px;
+  }
+}
 
 @media (max-width: 600px){
 .container{
@@ -289,7 +353,7 @@ font-size: 17px;}
 }
 
 .Game__Title{
-  font-size: 1.4rem;
+  font-size: 1.9rem;
 }
 
 .ListOfOptions__OptionCard{
@@ -329,5 +393,12 @@ width: 100px;
 .imgOfmachine{
   padding-top: 0px;
 }
+.nickname{
+  padding-top: 40px;
+}
 
 }
+
+
+
+

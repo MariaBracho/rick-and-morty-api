@@ -8,8 +8,8 @@ export class Burguer{
 	getInicio(){
 		this.inicio.innerHTML=`
 		<ul class="lista">
-			<li class="lista--sub"><a href="Index.html" class="lista--link">Inicio</a></li>
-			<li class="lista--sub"><a href="juego.html" class="lista--link">Juego</a></li>
+			<li class="lista--sub"><a href="../../../Index.html" class="lista--link">Inicio</a></li>
+			<li class="lista--sub"><a href="index.html" class="lista--link">Juego</a></li>
 			<li class="lista--sub"><a href="card.html" class="lista--link">Cards</a></li>
 		</ul>`
 
